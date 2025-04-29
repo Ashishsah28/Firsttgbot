@@ -1,4 +1,3 @@
-print("Started...")
 
 import telebot
 
