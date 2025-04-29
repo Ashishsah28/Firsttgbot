@@ -11,7 +11,7 @@ def start(message):
 @bot.message_handler(commands=['help'])
 def help(message):
     bot.reply_to(message, "You can Contact alpha.heist on Instagram")
-@bot.message_handler(func=lambda message: "hello" in message.text or "hi" in message.text)
+@bot.message_handler(func=lambda message: "hello" in message.text.lower() or "hi" in message.text.lower())
 def hey_hello(message):
     bot.reply_to(message, "Hi hello chodo ye batao tum ho kaun")
 
