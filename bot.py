@@ -14,7 +14,11 @@ def help(message):
 
 @bot.message_handler(func=lambda messages: True)
 def calc(message):
-    bot.reply_to(message, eval(message.text))
+    try:
+        ans = eval(message.text)
+        bot.reply_to(message, ans)
+    except:
+        bot.reply_to(message, "invalid input")
 
 
 bot.polling()
